@@ -13,11 +13,14 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/index.html"));
 });
 
+const PORT = process.env.PORT || 3000;
+
 // 🎬 Render endpoint
 app.post("/render", async (req, res) => {
   try {
     const conversation = req.body;
-
+    
+    console.log("Received request");
     const browser = await puppeteer.launch({
       args: [
         "--no-sandbox",
@@ -26,25 +29,25 @@ app.post("/render", async (req, res) => {
         "--disable-gpu"
       ]
     });
-
+    console.log("Puppeteer Launched");
     const page = await browser.newPage();
-
-    const url = `http://localhost:3000/?data=${encodeURIComponent(
+    console.log("Before sending request");
+    const url = `http://localhost:${PORT}/?data=${encodeURIComponent(
       JSON.stringify(conversation)
     )}&speed=2`;
 
     await page.goto(url);
-
+    console.log("Request sent to UI");
     await page.waitForFunction(() => window.__CHAT_READY__ === true);
 
     const recorder = new PuppeteerScreenRecorder(page);
-
+    console.log("Before recording start");
     await recorder.start("./video.mp4");
 
     await page.waitForFunction(() => window.__CHAT_DONE__ === true, {
       timeout: 60000
     });
-
+    console.log("Recording done");
     await recorder.stop();
     await browser.close();
 
@@ -56,5 +59,4 @@ app.post("/render", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("Server running on", PORT));
