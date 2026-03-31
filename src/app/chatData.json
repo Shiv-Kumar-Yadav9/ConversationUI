@@ -1,0 +1,112 @@
+{
+  "conversation": [
+    {
+      "Name": "Sarah Johnson",
+      "Photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+      "BackgroundPhoto": "",
+      "ZoomBackground": "#000000",
+      "StartDateAndTime": "2026-03-27T14:30:00Z",
+      "Chat": [
+        {
+          "Sender": 1,
+          "Message": "Hey! How are you doing?",
+          "Sent": 0,
+          "MessageDeltaTime": 0,
+          "Delay": 500,
+          "Active": 0,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 0,
+          "Message": "I'm doing great! Thanks for asking 😊",
+          "Sent": 1,
+          "MessageDeltaTime": 120000,
+          "Delay": 1500,
+          "Active": 0,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 1,
+          "Message": "That sounds awesome! Are you free this weekend?",
+          "Sent": 0,
+          "MessageDeltaTime": 86400000,
+          "Delay": 2000,
+          "Active": 2,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 0,
+          "Message": "Yes! I should be free on Saturday afternoon",
+          "Sent": 2,
+          "MessageDeltaTime": 86520000,
+          "Delay": 2500,
+          "Active": 0,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 1,
+          "Message": "Perfect! Let me know what time works best for you",
+          "Sent": 0,
+          "MessageDeltaTime": 172800000,
+          "Delay": 3000,
+          "Active": 0,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 0,
+          "Message": "How about 2 PM? We could grab coffee ☕",
+          "Sent": 3,
+          "MessageDeltaTime": 172920000,
+          "Delay": 3500,
+          "Active": 0,
+          "Zoom": 3,
+          "ZoomLag": 2000
+        }
+      ]
+    },
+    {
+      "Name": "Michael Chen",
+      "Photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+      "BackgroundPhoto": "gradient1",
+      "ZoomBackground": "#1a1a1a",
+      "StartDateAndTime": "2026-03-26T16:00:00Z",
+      "Chat": [
+        {
+          "Sender": 1,
+          "Message": "Did you finish the project report?",
+          "Sent": 0,
+          "MessageDeltaTime": 0,
+          "Delay": 500,
+          "Active": 5,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 0,
+          "Message": "Yes, just submitted it!",
+          "Sent": 2,
+          "MessageDeltaTime": 86460000,
+          "Delay": 1500,
+          "Active": 0,
+          "Zoom": 0,
+          "ZoomLag": 0
+        },
+        {
+          "Sender": 1,
+          "Message": "Great work! 🎉",
+          "Sent": 0,
+          "MessageDeltaTime": 172890000,
+          "Delay": 2000,
+          "Active": 0,
+          "Zoom": 2,
+          "ZoomLag": 1500
+        }
+      ]
+    }
+  ]
+}
