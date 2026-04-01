@@ -22,6 +22,7 @@ app.post("/render", async (req, res) => {
     
     console.log("Received request");
     const browser = await puppeteer.launch({
+      executablePath: puppeteer.executablePath(),
       headless: "new",
       args: [
         "--no-sandbox",
